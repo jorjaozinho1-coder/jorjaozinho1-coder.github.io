@@ -10,7 +10,10 @@
   "background_color": "#ffffff",
   "lang": "pt-BR",
   "dir": "ltr",
-  "categories": ["government", "utilities"],
+  "categories": [
+    "government",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "meu-icone.png",

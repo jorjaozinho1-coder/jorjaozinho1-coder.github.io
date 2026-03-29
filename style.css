@@ -116,31 +116,33 @@ textarea,
 .doc-viewer-content {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  gap: 10px; /* Reduzido de 20px para colar o texto na imagem */
+  padding:1rem;
   min-height: 0;
   background: #f0f0f0;
 }
 
+
+
 .doc-viewer-area {
-  position: relative;
   width: 100%;
-  max-width: 100%;
-  height: 100%;
-  min-height: 280px;
-  max-height: 55vh;
+  max-width: 560px;
+  height: 640px; /* Altura fixa para evitar que a tela pule */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .doc-viewer-img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ajusta a imagem sem esticar (mantém proporção) */
+  object-position: top center; /* Fixa a imagem no topo do contêiner, logo abaixo do texto */
   display: block;
 }
 
@@ -510,25 +512,25 @@ textarea,
 }
 
 .btn-govbr--dimmed {
-  opacity: 0.5;
+  opacity: 0.2;
   cursor: not-allowed;
 }
 
 .login-subtitle--dimmed {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .login-link--dimmed {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.2);
   pointer-events: none;
 }
 
 .login-link--dimmed .login-link__icon {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .login-version--dimmed {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 /* ========== PÁGINA INICIAL (HOME) ========== */
@@ -948,3 +950,23 @@ body {
     padding-top: var(--safe-top);
   }
 }
+
+.logo-doc {
+  width: 20%;
+  margin:10px
+}
+
+.faixa-identificacao h1{
+    /* Cores */
+    background-color: #f7e000; /* Amarelo */
+    color: #00703c;            /* Verde Escuro */
+    margin-bottom: 0px; /* Reduzido de 40px para deixar mais junto */
+    padding: 5px;
+    /* Alinhamento e Fonte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }

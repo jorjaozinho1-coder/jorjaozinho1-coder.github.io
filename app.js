@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
 
 const VIEWS = ['login', 'loading', 'home', 'carteira', 'document'];
 const LOADING_DURATION_MS = 2200;
-const DOC_IMAGES = ['images/cpf1.png', 'images/cpf2.png'];
+const DOC_IMAGES = ['images/cpf1.png', 'images/cpf2.png', 'images/cpf3.png', 'images/cpf4.png'];
 let docStep = 1;
 
 function getViewId(name) {
@@ -158,4 +158,10 @@ document.querySelectorAll('.service-item:not([data-open])').forEach((el) => {
   el.addEventListener('click', (e) => e.preventDefault());
 });
 
+// --- MODO PRODUÇÃO ---
+// Para produção, descomente a linha abaixo e comente a de desenvolvimento:
 showView('login');
+
+// --- MODO DESENVOLVIMENTO ---
+// Direciona direto para a tela do documento para testes
+// showView('document');
