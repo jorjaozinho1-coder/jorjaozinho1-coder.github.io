@@ -103,8 +103,9 @@ textarea,
 #view-document.view-active {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
-  min-height: 100vh;
+  height: 100dvh;
+  height: 100vh;
+  overflow: hidden; /* Remove completamente qualquer chance de rolagem da tela */
 }
 
 #view-document .doc-viewer-actions,
@@ -132,6 +133,7 @@ textarea,
   max-width: 560px;
   flex: 1; /* Ocupa exatamente o espaço restante da tela, sem rolar */
   min-height: 0; /* Impede que o conteúdo estoure o contêiner flex */
+  overflow: hidden; /* Força imagens gigantes a não esticarem as caixas */
   position: relative;
   display: flex;
   align-items: center;
