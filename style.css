@@ -118,8 +118,8 @@ textarea,
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px; /* Reduzido de 20px para colar o texto na imagem */
+  justify-content: flex-start; /* Muda para alinhar ao topo */
+  gap: 5px; /* Reduzido de 20px para colar o texto na imagem */
   padding:1rem;
   min-height: 0;
   background: #f0f0f0;
@@ -130,7 +130,8 @@ textarea,
 .doc-viewer-area {
   width: 100%;
   max-width: 560px;
-  height: 640px; /* Altura fixa para evitar que a tela pule */
+  flex: 1; /* Ocupa exatamente o espaço restante da tela, sem rolar */
+  min-height: 0; /* Impede que o conteúdo estoure o contêiner flex */
   position: relative;
   display: flex;
   align-items: center;
